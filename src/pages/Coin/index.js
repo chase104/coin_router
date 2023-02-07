@@ -1,8 +1,9 @@
 import React from 'react'
 
 const Price = () => {
+  // how to get that param value
   return (
-    <div>Price</div>
+    <div className='page-container'>Price</div>
   )
 }
 
