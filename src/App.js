@@ -8,7 +8,8 @@ function App() {
     <div className="App">
       <Nav />
       {/* conditionally render those pages here */}
-        <Outlet />
+      <Outlet /> 
+      {/* Outlet is where our pages will display */}
     </div>
   );
 }

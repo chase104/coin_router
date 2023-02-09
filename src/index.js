@@ -18,8 +18,8 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
-    children: [
+    element: <App />, // yahoo main site
+    children: [ // pages
       {
         path: "/",
         element: <Main />,
@@ -29,11 +29,12 @@ const router = createBrowserRouter([
         element: <Currencies />,
       },
       {
-        path: "/coin/:symbol",
+        path: "/coin/:symbol/:user",
         element: <Coin />,
       },
     ]
   },
+
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
