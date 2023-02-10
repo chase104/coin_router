@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -6,42 +6,44 @@ import Main from './pages/Main'
 import Currencies from './pages/Currencies'
 import Coin from './pages/Coin'
 import reportWebVitals from './reportWebVitals';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+// import {
+//   createBrowserRouter,
+//   RouterProvider,
+// } from "react-router-dom";
+import { BrowserRouter as Router } from 'react-router-dom';
 
 //     /                    render Main
 //     /currencies          Currencies Page
 //     /price               Price Page
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />, // yahoo main site
-    children: [ // pages
-      {
-        path: "/",
-        element: <Main />,
-      },
-      {
-        path: "/currencies",
-        element: <Currencies />,
-      },
-      {
-        path: "/coin/:symbol/:user",
-        element: <Coin />,
-      },
-    ]
-  },
+// const router = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <App />, // yahoo main site
+//     children: [ // pages
+//       {
+//         path: "/",
+//         element:  <Main />,
+//       },
+//       {
+//         path: "/",
+//         element: <Currencies />,
+//       },
+//       {
+//         path: "/coin/:symbol/:user",
+//         element: <Coin />,
+//       },
+//     ]
+//   },
 
-]);
+// ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Router><App /></Router>
+    {/* <RouterProvider router={router} /> */}
   </React.StrictMode>
 );
 
